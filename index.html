@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" ></script>
+    <script src="view.js" async></script>
+  </head>
+
+  <body>
+
+    <h1>Welcome to Image Editor Page</h1>
+    <h4>Quick Tutorial:</h4>
+    <p>1. Select an image to upload for viewing</p>
+    <p>2. Select the appropriate button to <i>View, Grayscale, Crop </i> input image </p>
+    <p>3. To refresh the page, select Try again button</p>
+    <br>
+    <canvas id="hiddenCanvas"></canvas>
+    <canvas id="hiddenCanvasGray"></canvas>
+    <p>
+      <input type="file" multiple="false" accept="image/*" id="inputFile" onchange="upload()">
+      <a onclick="drawImg()" class="button c">View Image</a>
+      <a href="#grayImage" onclick="grayImg()" class="button">Grayscale Image</a>
+      <a href="#cropImage" onclick="cropImg()" class="button" id="crop">Crop Image</a>
+      <a type="button" class="button c" onClick="window.location.reload()">Try again</a>
+    </p>
+
+    <!-- creating canvas tag to display the images. Giving an erros message if broswer does not support html canvas tag -->
+    <div class="img-card">
+      <canvas id="image">
+        Your browser Does not support Canvas tag.
+      </canvas>
+      <h2>Original image given</h2>
+    </div>
+
+    <div class="img-card">
+      <canvas id="grayImage"></canvas>
+      <h2>Grayed Image view</h2>
+    </div>
+    
+
+    <div id="wrapper">
+
+      <div id="crop-box">
+        <div class="img-card">
+          <canvas id="cropImage"></canvas>
+          <h2>Cropped image view</h2>
+          <h5>Enter desired x, y, width and height for your cropped image</p>
+        </div>
+      </div>
+
+      <div id="crop-elements">
+          <div class=box '><span class="element-m"> X: </span><input type="text" id="x" value=0> px</div>
+          <div class=box '><span class="element-m"> Y: </span> <input type="text" id="y" value=0> px</div>
+          <div class=box '><span class="element-n"> Width: </span><input type="text" id="width" value=0> px</div>
+          <div class=box '> Height: <input type="text" id="height" value=0> px</div>
+          <button onclick="cropImg()">Crop it!</button>
+      </div>
+
+    </div>
+
+    
+
+  </body>
+</html>

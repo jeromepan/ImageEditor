@@ -1,0 +1,72 @@
+body {
+  font-family: Sans-serif;
+  color: gray;
+}
+
+#image {
+  height: 300px;
+  width: 400px;
+  /*border: 1px solid lightgray;*/
+}
+#grayImage {
+  height: 300px;
+  width: 400px;
+  /*border: 1px solid lightgray;*/
+}
+#cropImage {
+  height: 300px;
+  width: 400px;
+  /*border: 1px solid lightgray;*/
+}
+.button{
+  background-color: lightblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.box{
+  margin:2px;
+  border:2px solid lightgray;
+  color:white;
+  background-color: lightgray;
+}
+
+.element-m{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.element-n{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#crop-elements{
+  margin-top: 30px;
+}
+
+#wrapper {
+  display: flex;
+}
+#hiddenCanvas{
+  display:none;
+}
+#hiddenCanvasGray{
+  display: none;
+}
+.img-card{
+  width:400px;
+  margin:10px;
+  height: 400px;
+  padding: 10px;
+  border: 2px solid gray;
+  background-color: #F1FAFC;
+}
+
+.c{
+  cursor:pointer;
+}
